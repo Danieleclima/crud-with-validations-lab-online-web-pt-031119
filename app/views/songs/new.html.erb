@@ -13,10 +13,23 @@
   </div>
 <% end %>
 
+<<<<<<< HEAD
 
   <div class="field">
     <%= f.label :title%>
     <%= f.text_field :title %>
+=======
+<% if @song.errors[:title].any? %>
+  <div class="field_with_errors [name=title]">
+    <%= label_tag "title", "Title" %>
+    <%= text_field_tag "song[title]", @song.title %>
+  </div>
+<% else %>
+
+  <div class="field">
+    <%= label_tag "title", "Title" %>
+    <%= text_field_tag "song[title]" %>
+>>>>>>> db9762ab8a4e46294919e31fe3afef8e5e7ed383
   </div>
 
 
